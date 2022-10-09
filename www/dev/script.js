@@ -1,5 +1,5 @@
 function getContentFromApi(filename, selector) {
-    fetch('http://localhost:3000/api/content/' + filename)
+    fetch('http://localhost:9999/api/content/' + filename)
     .then(response => response = response.json())
     .then((content) => {
         console.log(content)
@@ -10,12 +10,20 @@ function getContentFromApi(filename, selector) {
 // getContentFromApi('kursplan.md', '[data-source="content"]')
 
 function getUsers() {
-    fetch('http://localhost:3000/api/users/')
+    fetch('http://localhost:9999/api/users/')
         .then((response) => response = response.json())
         .then(users => {
             console.log(users)
+
+            users.forEach(user => {
+                for(let key in user) {
+                    let element = document.querySelector('[data-source="' + key + '"]')
+                    console.log(element)
+                    if(element) {
+                        element.innerText = user[key]
+                    }
+                }
+            })
         })
 }
 getUsers()
-
-
