@@ -5,39 +5,58 @@
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/default.min.css">
         <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+        <link rel="stylesheet" href="style.css">
     </head>
-    <body>
-        <nav>
-            <ul>
-                <li><a href="/">Start</a></li>
-            </ul>
-        </nav>
+    <body style="background-color:#292a2d">
+      
+
+        <!--Problemformulering:-->
+
+        <!--Vardaglig-->
+        <!--Jag har valt att göra en hemsida där du kan sortera personer efter förnamn, efternamn eller personlighetstyp (färg) samt dela in personer i slumpmässiga grupper -->
+        
+        <!-- Domänspecifikt-->
+        <!-- Min hemsida sorterar samt grupperar användare som jag fetchar från en mapp med JSON-filer. Detta gör jag med hjälp av javascript samt HTML-->
+
+        <!-- Tekniskt-->
+        <!-- Jag fetchar användarna från "data/dev/users" till en JS-fil, därefter kopplar jag ihop min HTML-fil med JS-filen med hjälp av "<script src="script.js"></script>", alla mina funktioner skrivs i JS-filen, jag har även gjort en CSS-fil för att styla hemsidan, den hämtar klasser och ID's från HTML/JS-filerna. =-->
+
         <main>
             <h1 id="DocumentTitle">Frontend 1: Examinationsuppgift</h1>
             <section id="MainDescription">
-                <p>
-                    Välkommen till kursen "Frontent 1: Javascript" hos Nackademin. Hoppas alla har kul.
+                <p style="font-family: Arial, Helvetica, sans-serif">
+                    Hej och välkommen till Jonathans första hemsida! Denna hemsida är gjord för att du skall kunna sortera användare i olika kategorier. <br>
+                    Nedan har jag 4 olika kategorier du kan sortera på, allt du behöver göra är att trycka på antingen Förnamn, Efternamn, Personlighetstyp eller Grupp. <br>
+                    Vill du däremot dela in alla användare i slumpmässiga grupper så har jag gjort en funktion längst ner på sidan. Där skriver du in hur många medlemmar per grupp du vill ha, och trycker sedan på knappen "Slumpa".
+
                     </p>
-                <p>
-                    Det här projektet är tänkt att ge alla studenter ett ramverk för att dela, testa, granska och lämna in kod. Glöm inte att ha kul ':p
                     </p>
             </section>
             <section data-source="content">
             </section>
 
             <section>
-                <ul>
-                    <li><em>Förnamn: </em><span data-source="firstname">TESTDATA</span></li>
-                    <li><em>Efternamn: </em><span data-source="lastname">TESTDATA</span></li>
-                    <li><em>Github: </em><span data-source="github">TESTDATA</span></li>
-                    <li><em>Discord: </em><span data-source="discord">TESTDATA</span></li>
-                </ul>
+                <div class="infoWrapper">
+                    <h2 id="firstname">Förnamn:</h2>
+                    <h2 id="lastname">Efternamn:</h2>
+                    <h2 id="personalityType">Personlighetstyp:</h2>
+                    <h2 id="group">Grupp:</h2>
+                </div>
+                <div class="Container"></div>
             </section>
             
             <p id="ProjectCredits">
-                Den här sidan är byggd med f_stack-js.<br/>
+                Den här sidan är byggd av Jonathan.<br/>
             </p>
         </main>
-        <script src="script.js"></script>
+        <script src="script.js"></script>  
+        <nav id="resetButton">
+                <div class="resetButton">
+                    <button onclick="window.location.reload();">Återställ</button>
+                    <input placeholder="Medlemmar per grupp:" id="groupAmount" type="number">
+                    <button id="groupBtn">Slumpa</button>
+                </div>
+                     
+        </nav>
     </body>
 </html>

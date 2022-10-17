@@ -1,0 +1,48 @@
+
+.userWrapper{
+    color: #bdc1c6;
+    display: flex;
+    justify-content: space-between;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    text-transform:capitalize
+    
+}
+
+.userWrapper span {
+    flex-basis: 25%;
+}
+
+.infoWrapper{
+    color: #bdc1c6;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: solid;
+}
+
+.infoWrapper h2 {
+    flex-basis: 25%;
+}
+
+#DocumentTitle{
+    color: #bdc1c6;
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content:center;
+}
+
+#MainDescription {
+    color: #bdc1c6;
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: center;
+}
+
+#ProjectCredits {
+    color: #bdc1c6;
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: flex-end;
+}
