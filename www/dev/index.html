@@ -7,7 +7,7 @@
         <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
         <link rel="stylesheet" href="style.css">
     </head>
-    <body style="background-color:#292a2d">
+    <body id= backgroundStyle>
       
 
         <!--Problemformulering:-->
@@ -24,17 +24,20 @@
         <main>
             <h1 id="DocumentTitle">Frontend 1: Examinationsuppgift</h1>
             <section id="MainDescription">
-                <p style="font-family: Arial, Helvetica, sans-serif">
-                    Hej och välkommen till Jonathans första hemsida! Denna hemsida är gjord för att du skall kunna sortera användare i olika kategorier. <br>
-                    Nedan har jag 4 olika kategorier du kan sortera på, allt du behöver göra är att trycka på antingen Förnamn, Efternamn, Personlighetstyp eller Grupp. <br>
-                    Vill du däremot dela in alla användare i slumpmässiga grupper så har jag gjort en funktion längst ner på sidan. Där skriver du in hur många medlemmar per grupp du vill ha, och trycker sedan på knappen "Slumpa".
-
+                <p id= description style="font-family: Arial, Helvetica, sans-serif">
+                    Hej och välkommen till Jonathans första hemsida, denna hemsida är gjord för att enkelt sortera data
+                    <br>På denna hemsida kan du sortera alfabetiskt genom att trycka på t.ex Förnamn, Efternamn eller Grupp.
+                    <br>Den har även en sök-funktion som gör att du enkelt kan hitta den data du letar efter. 
+                    <br><br>Sista men inte minst har hemsidan en slumpmässig gruppindelning, denna använder du genom att 
+                    <br>mata in hur många medlemmar du vill ha i varje grupp nere i vänstra fältet, och sedan trycka 
+                    <br>på knappen "Slumpa". Detta kommer ge alla medlemmar ett nytt gruppnummer helt slumpmässigt. 
                     </p>
                     </p>
             </section>
             <section data-source="content">
+                
             </section>
-
+            <input type="text" id="searchbar" onkeyup="searchFunction()" placeholder="Sök efter personer eller grupp">
             <section>
                 <div class="infoWrapper">
                     <h2 id="firstname">Förnamn:</h2>
@@ -52,7 +55,7 @@
         <script src="script.js"></script>  
         <nav id="resetButton">
                 <div class="resetButton">
-                    <button onclick="window.location.reload();">Återställ</button>
+                    <button id="resetBtn" onclick="resetBtn()">Återställ</button>
                     <input placeholder="Medlemmar per grupp:" id="groupAmount" type="number">
                     <button id="groupBtn">Slumpa</button>
                 </div>
