@@ -7,7 +7,7 @@ const { marked } = require('marked')
 const path = require("path")
 const {F_DATA} = require('./src/node/f_data/f_data.js')
 app = express()
-const port = process.env.DEV_SERVER_PORT || 3000
+const port = process.env.DEV_SERVER_PORT || 9999
 
 app.use(express.static(path.join(__dirname, "www/dev")))
 
